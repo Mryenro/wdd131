@@ -1,0 +1,113 @@
+:root {
+    --primary-color: #CE796B;
+    /* Old rose */
+    --secondary-color: #ECC8AF;
+    /* Desert sand */
+    --accent1-color: #495867;
+    /* Thistle */
+    --accent2-color: #5B5B5B;
+    /* payne's Gray */
+    --heading-font: "Alfa Slab One", sans-serif;
+    --body-font: "Open Sans", sans-serif;
+    --accent3-color: #A4DEF9;
+    /* third accent color to avoid contrast errors, Uranian blue*/
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    font-family: var(--body-font);
+}
+
+.course-title span {
+    background-color: var(--secondary-color);
+        padding: 1rem;
+        border: 1px solid rgb(0 0 0 / 10%);
+        font-size: 2rem;
+        text-align: center;
+    }
+
+
+h1 {
+    background-color: var(--accent3-color);
+    padding: 1rem;
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 2rem;
+    text-align: center;
+}
+
+
+nav {
+    background-color: var(--accent1-color);
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    font-family: var(--heading-font);
+}
+
+nav a:hover {
+    text-decoration: overline;
+    color: var(--primary-color);
+}
+
+.active {
+
+    color: var(--accent2-color);
+}
+
+/* larger/wider views **************************/
+@media (min-width: 640px) {
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+        nav ul li {
+            flex: 1 0 auto;
+            /* flex: [flex-grow] [flex-shrink] [flex-basis]; 
+            in this example, the items will not shrink but can grow to fill the space at natural content width*/
+    
+        }
+    }
+
+
+
+main {
+    width: 1200px;
+    width: 90%; /* Provides a flexible width that won't exceed 1200px */
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+
+.card {
+    border: 1px solid var(--accent2-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+.card img {
+    /* Make images fill the card width while maintaining aspect ratio */
+    width: 100%;
+    height: auto;
+    display: block;
+    /* Removes any default bottom margin from inline images */
+}
