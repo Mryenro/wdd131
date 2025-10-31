@@ -20,6 +20,25 @@
     box-sizing: border-box;
 }
 
+header span#course-title{
+    background-color: var(--secondary-color);
+    color: var(--accent1-color);
+    padding: 1.5rem;
+    /* Increased padding */
+    border: 1px solid rgb(0 0 0 / 10%);
+    font-size: 3rem;
+    /* Made the font significantly bigger */
+    text-align: center;
+    display: block;
+    font-family: var(--heading-font);
+    /* Used the bold heading font */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    /* Added margin to separate it from the nav bar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    /* Added a professional shadow */
+}
+
 
 
 body {
@@ -41,6 +60,10 @@ h1 {
     border: 1px solid rgb(0 0 0 / 10%);
     font-size: 2rem;
     text-align: center;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    grid-column: 1 / span 2;
 }
 
 
@@ -93,7 +116,7 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
     padding: 1rem;
 }
 
@@ -102,12 +125,65 @@ main {
     border: 1px solid var(--accent2-color);
     padding: 1rem;
     text-align: center;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.card img {
-    /* Make images fill the card width while maintaining aspect ratio */
-    width: 100%;
+.card h2 {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 0.75rem 1rem;
+    margin: 0;
+    /* Remove default h2 margin */
+    font-size: 1.5rem;
+    font-family: var(--heading-font);
+    text-align: center;
+    /* Center the card title text */
+}
+
+
+
+/* Container for the content inside the card */
+.card-content {
+    padding: 1.5rem;
+}
+
+/* Paragraph styling inside the card */
+.card-content p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    color: var(--accent2-color);
+}
+
+/* General image rules for floating layout */
+.card-content img {
+    width: 150px;
+    /* Fixed width for better visual control */
     height: auto;
-    display: block;
-    /* Removes any default bottom margin from inline images */
+    margin: 0 0 1rem 0;
+    /* Clear up existing margins */
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+}
+
+/* Card 1: Profile Image should float to the RIGHT (Using nth-child(2) because h1 is the first child) */
+.card:nth-child(2) .profile-image {
+    float: right;
+    margin-left: 1.5rem;
+    /* Add space to the left of the image */
+}
+
+/* Card 2: Flag image should float to the LEFT (Using nth-child(3) because h1 is the first child) */
+.card:nth-child(3) .flag-image {
+    float: left;
+    margin-right: 1.5rem;
+    /* Add space to the right of the flag */
+}
+
+footer {
+    background-color: var(--accent1-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
 }
