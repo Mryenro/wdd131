@@ -39,6 +39,13 @@ header span#course-title{
     /* Added a professional shadow */
 }
 
+header {
+    width: 100%;
+    /* Ensures the header spans the full width of the viewport */
+    background-color: white;
+    /* Sets a neutral background for the container */
+}
+
 
 
 body {
