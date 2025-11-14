@@ -123,3 +123,24 @@ footer {
     text-align: center;
     border-top: 4px solid var(--accent1-color);
 }
+
+
+ /* ::after */
+.header::after {
+    content: "";
+   
+    display: block;
+
+
+    position: relative;
+    bottom: 0;
+   
+    left: 0;
+
+    
+    width: 100%;
+    height: 4px;
+    
+    background-color: var(--accent3-color);
+   
+}
