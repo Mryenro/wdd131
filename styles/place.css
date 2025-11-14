@@ -31,11 +31,13 @@ header {
     color: white;
     padding: 1.5rem 1rem;
     text-align: center;
+    border-bottom: 20px solid var(--accent1-color);
 }
 
 .place-title {
     font-family: var(--heading-font);
     font-size: 1.5rem;
+    
 }
 
 /* MAIN */
@@ -78,7 +80,7 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     padding: 1rem;
-    border-top: 6px solid var(--accent1-color);
+    border-top: 6px solid var(--accent3-color);
 }
 
 /* TITLE BAR */
@@ -91,6 +93,7 @@ header {
     border-radius: 4px;
     display: inline-block;
     margin-bottom: 1rem;
+    
 }
 
 /* INFO TEXT */
