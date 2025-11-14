@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo, Japan</title>
+
+    <meta name="description" content="Detailed information and weather for Madagascar.">
+    <meta name="author" content="Hamza Bouhou">
+
+    <!-- Google Fonts (Required for the audit) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Open+Sans:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <script src="scripts/place.js" defer></script>
+    <script src="scripts/getdates.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="place-title">Tokyo, Japan</h1>
+    </header>
+
+    <main class="main-content">
+
+        <div class="image-container">
+            <picture>
+                <source srcset="images/tokyo-large.webp" media="(min-width: 1000px)">
+                <img src="images/tokyo-small.webp" alt="Tokyo dear" class="hero-image">
+            </picture>
+        </div>
+
+            <!-- Overlaid Boxes -->
+        <section class="info-overlay">
+
+            <!-- DATA BOX -->
+            <div class="data-box">
+                <h2 class="section-title">Data</h2>
+                <div class="data-list">
+                    <p><span class="label">Area:</span> <span class="value">2,194 sq km</span></p>
+                    <p><span class="label">Population:</span> <span class="value">14,094,034</span></p>
+                    <p><span class="label">Capital:</span> <span class="value">Tokyo</span></p>
+                    <p><span class="label">Languages:</span> <span class="value">Japanese</span></p>
+                    <p><span class="label">Currency:</span> <span class="value">Japanese Yen (JPY)</span></p>
+                    <p><span class="label">Time Zone:</span> <span class="value">UTC+9</span></p>
+                    <p><span class="label">Calling Code:</span> <span class="value">+81</span></p>
+                    <p><span class="label">Internet TLD:</span> <span class="value">.jp</span></p>
+                </div>
+            </div>
+
+            <!-- WEATHER BOX -->
+            <div class="weather-box">
+                <h2 class="section-title">Weather</h2>
+
+                <div class="weather-icon">
+                    <picture>
+                        <source srcset="images/weather-large.svg" media="(min-width: 1000px)">
+                        <img src="images/weather-small.svg" alt="Weather Icon" class="weather-icon-img">
+                    </picture>
+                </div>
+
+                <div class="weather-list">
+                    <p><span class="label">Temperature:</span> <span class="value">18 °C</span></p>
+                    <p><span class="label">Conditions:</span> <span class="value">Clear</span></p>
+                    <p><span class="label">Wind:</span> <span class="value">7 km/h</span></p>
+                    <p><span class="label">Wind Chill:</span> <span class="value" id="windChillValue">N/A</span></p>
+                </div>
+            </div>
+
+        </section>
+        
+
+    </main>
+
+    <footer class="footer">
+        <p>©<span id="currentyear"></span> Hamza Bouhou 🦘 Bendigo, Australia 🦘</p>
+        <p id="lastModified"></p>
+    </footer>
+
+</body>
+
+</html>

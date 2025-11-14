@@ -1,0 +1,43 @@
+@media screen and (min-width: 1000px) {
+
+    .image-container {
+        aspect-ratio: 2 / 1;
+    }
+
+    /* Overlay floats over the image */
+    .info-overlay {
+        position: absolute;
+        top: 30%;
+        /* ADJUSTS VERTICAL POSITION */
+        left: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* Align both boxes horizontally */
+        padding: 2rem;
+    }
+
+    .data-box,
+    .weather-box {
+        width: 320px;
+        background-color: rgba(255, 255, 255, 0.85);
+        height: auto;
+    }
+
+    /* Weather box slightly lower like the example */
+    .weather-box {
+        align-self: flex-start;
+        margin-left: auto;
+
+    }
+
+    .weather-icon img {
+        max-width: 60px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+}
