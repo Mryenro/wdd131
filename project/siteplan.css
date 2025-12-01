@@ -1,0 +1,93 @@
+/* siteplan.css - Supporting CSS for the Armor Gate Project */
+
+/* Define CSS Variables for the project (Reiterated from HTML for completeness) */
+:root {
+    --primary-color: #3f2212;
+    /* Dark Brown - Headings, Accents */
+    --secondary-color: #e6e6e6;
+    /* Light Gray/Silver - Background */
+    --text-color: #1a1a1a;
+    /* Very Dark Gray - Paragraphs/Body Text */
+    --accent-color: #a08040;
+    /* Muted Gold - Accents, Borders */
+}
+
+/* Base Typography for the actual website */
+body {
+    font-family: 'Georgia', serif;
+    /* Body text font */
+    color: var(--text-color);
+    background-color: #ffffff;
+    /* Typically a white background for the main site */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Times New Roman', serif;
+    /* Heading font */
+    color: var(--primary-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Navigation Bar Styling Concept */
+.main-nav {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+}
+
+.main-nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+
+/* Button Styling Concept */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: 2px solid var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+/* Footer Styling Concept */
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+/* Image/Product Card Borders/Accents */
+.product-card {
+    border: 1px solid var(--secondary-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.product-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 15px rgba(160, 128, 64, 0.5);
+    /* Subtle gold glow on hover */
+}
