@@ -194,3 +194,14 @@ body {
     margin-right: 6px;
     margin-top: 0;
 }
+
+
+
+
+/* ---------- FOOTER ---------- */
+footer {
+    background-color: #f8f8f8;
+    color: rgb(0, 0, 0);
+    padding: 1rem;
+    text-align: center;
+}
