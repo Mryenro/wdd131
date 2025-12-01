@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="review page after submitting the form">
+    <meta name="author" content="Hamza Bouhou">
+
+    <title>Review Submitted</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+    <link href="styles/form.css" rel="stylesheet">
+    <link href="styles/form-large.css" rel="stylesheet">
+
+
+    <script src="scripts/review_confirm.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+
+    <nav>
+        <ul>
+            <li><a href="#">About</a></li>
+            <li class="active"><a href="index.html">Review Form</a></li>
+            <li><a href="#">Winners</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <main>
+        <h1>Review Submitted Successfully! </h1>
+
+        <p>Thank you for your valuable feedback. Your review helps us improve the quality of our products and service.
+        </p>
+
+        <div
+            style="padding: 20px; border: 1px solid #1a436e; background-color: #f0f8ff; border-radius: 5px; margin-top: 30px;">
+            <h3>Total Reviews Posted</h3>
+            <p style="font-size: 1.5em; font-weight: bold; color: #1a436e;">You have submitted <span
+                    id="reviewCount">...</span> reviews across all sessions.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            Hamza Bouhou 🦘Bendigo, Australia🦘
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

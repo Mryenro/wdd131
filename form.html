@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Form to review a product">
+    <meta name="author" content="Hamza Bouhou">
+
+    <!-- This start file was build by Paul Cheney  -->
+    <title>Form by Hamza Bouhou</title>
+
+    <!-- TELLS PHONES NOT TO LIE ABOUT THEIR WIDTH & stops the font from enlarging when a phone is turned sideways-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+
+    <!-- STYLE SHEETS -->
+    <link href="styles/form.css" rel="stylesheet">
+    <!-- enhance-desktop -->
+    <link href="styles/form-large.css" rel="stylesheet">
+  
+
+    <script src="scripts/getdates.js" defer></script><!-- taking get dates scripts from week 1 -->
+    <script src="scripts/form.js" defer></script>
+
+
+
+
+</head>
+
+<body>
+    <!-- HEADER HERE -->
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+
+
+
+    <!-- CONTENT HERE -->
+    <main>
+        <form method="get" action="review.html" class="wf1">
+
+
+
+
+            <label for="product">Product</label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product &#9662;</option>
+                <!-- Dynamic options go here -->
+            </select>
+
+            <label>Overall Rating
+                <div class="star-rating">
+                    <input type="radio" name="stars" id="star-a" value="5" required />
+                    <label for="star-a"></label>
+                
+                    <input type="radio" name="stars" id="star-b" value="4" />
+                    <label for="star-b"></label>
+                
+                    <input type="radio" name="stars" id="star-c" value="3" />
+                    <label for="star-c"></label>
+                
+                    <input type="radio" name="stars" id="star-d" value="2" />
+                    <label for="star-d"></label>
+                
+                    <input type="radio" name="stars" id="star-e" value="1" />
+                    <label for="star-e"></label>
+                </div>
+            </label>
+
+            
+
+
+            <label>Date of Installation
+                <input type="date" name="completeDate" required>
+            </label>
+
+            <div>Useful Features</div>
+            <label><input type="checkbox" name="durability" value="yes"> Durability</label>
+            <label><input type="checkbox" name="easy to install" value="yes"> Easy To Install</label>
+            <label><input type="checkbox" name="usage" value="yes"> Usable</label>
+            <label><input type="checkbox" name="lowcost" value="yes"> Budget Friedly version</label>
+
+
+            <div>Written Review (Optional)</div>
+            <label><textarea name="review" id="review"></textarea></label>
+
+            <div>Your name (Optional)</div>
+            <label><input type="text" name="fname"></label>
+            
+
+            <input type="submit" value="Post Review">
+
+
+        </form>
+
+
+    </main>
+
+    <!-- FOOTER HERE -->
+    <footer>
+        <p>
+            ©<span id="currentyear"></span>
+            Hamza Bouhou 🦘Bendigo, Australia🦘
+            | Reviews Submitted: <span id="reviewCount">0</span>
+        </p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
