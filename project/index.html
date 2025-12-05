@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Armor Gate — premium medieval armor, weapons, and handcrafted historical gear. Authentic craftsmanship for collectors, reenactors, and enthusiasts.">
+    <meta name="author" content="Hamza Bouhou">
+    <title>Armor Gate | Medieval Armor & Weapons</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/armorgate.css">
+
+    <link rel="icon" type="image/png" href="images/logo-icon.png">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/armorgates.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">⚔️ Armor Gate</div>
+
+        <button id="menuButton" aria-label="Open Menu">☰</button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <img src="images/hero-knight.jpg" loading="lazy" alt="Medieval knight in armor" class="hero-img">
+        <div class="hero-text">
+            <h1>Forged for Battle. Crafted for Legends.</h1>
+            <p>Handcrafted medieval armor & weapons built with historical precision.</p>
+            <a href="shop.html" class="btn-primary">Enter the Armory</a>
+        </div>
+    </section>
+
+    <section class="featured page-content">
+        <h2>Featured Gear</h2>
+        <div id="featuredGrid" class="product-grid">
+        </div>
+    </section>
+
+    <section class="history page-content">
+        <h2>The Craft of Medieval Armor</h2>
+        <p>
+            Every piece sold on Armor Gate is crafted using techniques inspired by historical blacksmiths.
+            Our artisans combine authentic medieval methods with modern precision to deliver armor and weapons
+            worthy of collectors, reenactors, and warriors alike.
+        </p>
+    </section>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Armor Gate — Crafted by Hamza Bouhou 🤺⚔️</p>
+        <p id="lastModified"></p>
+        <a href="references.html">Sources & References</a>
+    </footer>
+
+</body>
+
+</html>

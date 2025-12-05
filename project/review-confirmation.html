@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted | Armor Gate</title>
+
+    <meta name="description" content="Thank you for submitting your review to Armor Gate.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Merriweather:wght@300;400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/armorgate.css">
+
+    <link rel="icon" type="image/png" href="images/logo-icon.png">
+
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/armorgates.js" defer></script>
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">⚔️ Armor Gate</div>
+        <button id="menuButton" aria-label="Menu">☰</button>
+
+        <nav id="mainNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="review.html">Reviews</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="review-confirmation page-content">
+        <section class="confirmation-box">
+
+            <h1>Thank You, Warrior!</h1>
+            <p class="icon">✅</p>
+            <p>Your review has been successfully submitted and will aid fellow knights in choosing their gear.</p>
+
+            <hr>
+
+            <h2>Review Statistics</h2>
+            <p>You have submitted a total of <strong id="reviewCount">0</strong> reviews.</p>
+            <p class="small-print">
+                This count is stored locally on your device.
+            </p>
+
+            <a href="index.html" class="btn-primary">Return to the Armory</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="currentyear"></span> Armor Gate — Crafted by Hamza Bouhou 🤺⚔️</p>
+        <p id="lastModified"></p>
+        <a href="references.html">Sources & References</a>
+    </footer>
+
+
+    <script>
+        // Get the current review count from localStorage
+        const count = localStorage.getItem("visitCount") || 0;
+        document.getElementById('reviewCount').textContent = count;
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,549 @@
+/*
+    Armor Gate Styles
+*/
+
+/* ------------------- */
+/* BASE STYLES & TYPOGRAPHY */
+/* ------------------- */
+
+:root {
+    --primary-color: #A0522D;
+    /* Sienna (Earthy brown/red) */
+    --secondary-color: #36454F;
+    /* Charcoal Gray */
+    --accent-color: #FFD700;
+    /* Gold */
+    --light-bg: #F5F5DC;
+    /* Beige */
+    --dark-text: #1C1C1C;
+    --font-heading: 'Cinzel', serif;
+    --font-body: 'Merriweather', serif;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--dark-text);
+    background-color: var(--light-bg);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+    padding-bottom: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-lg) var(--spacing-md);
+}
+
+/* Links */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Buttons */
+.btn-primary {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s;
+    font-family: var(--font-heading);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    margin-top: 2rem;
+}
+
+/* ------------------- */
+/* HEADER & NAVIGATION */
+/* ------------------- */
+
+.site-header {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: var(--spacing-md) var(--spacing-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent-color);
+}
+
+#menuButton {
+    display: block;
+    /* Show on mobile */
+    background: none;
+    border: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    padding: var(--spacing-sm) var(--spacing-md);
+    cursor: pointer;
+}
+
+#mainNav ul {
+    list-style: none;
+    display: none;
+    /* Hidden by default for mobile */
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+}
+
+#mainNav.open ul {
+    display: flex;
+}
+
+#mainNav a {
+    color: white;
+    display: block;
+    padding: var(--spacing-md);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#mainNav a:hover,
+#mainNav a.active {
+    background-color: var(--primary-color);
+}
+
+/* Desktop Navigation */
+@media (min-width: 768px) {
+    #menuButton {
+        display: none;
+    }
+
+    #mainNav ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        box-shadow: none;
+    }
+
+    #mainNav a {
+        padding: 0 1rem;
+        border-bottom: none;
+    }
+
+    #mainNav li:last-child a {
+        padding-right: 0;
+    }
+}
+
+/* ------------------- */
+/* INDEX PAGE SECTIONS */
+/* ------------------- */
+
+/* Hero Section */
+.hero {
+    position: relative;
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: var(--spacing-lg);
+}
+
+.hero-text h1 {
+    color: var(--accent-color);
+    font-size: 3rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.hero-text p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* History Section (same as .page-content) */
+.history {
+    text-align: center;
+}
+
+/* ------------------- */
+/* PRODUCT GRID */
+/* ------------------- */
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    padding: var(--spacing-md);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit:contain; /* contain instead of cover helps to put the big image */
+    border-radius: 3px;
+    margin-bottom: var(--spacing-md);
+}
+
+.product-card h3 {
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
+.product-card .price {
+    font-weight: bold;
+    color: var(--secondary-color);
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+/* ------------------- */
+/* FOOTER */
+/* ------------------- */
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: var(--spacing-lg) 0;
+    margin-top: var(--spacing-lg);
+}
+
+footer p {
+    margin: var(--spacing-sm) 0;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--accent-color);
+}
+
+footer a:hover {
+    color: white;
+}
+
+
+/* ------------------- */
+/* REVIEW PAGE SPECIFIC STYLES */
+/* ------------------- */
+
+.review-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.review-hero-title {
+    text-align: center;
+    padding: var(--spacing-md) 0;
+    border-bottom: 2px solid var(--primary-color);
+    margin-bottom: var(--spacing-lg);
+}
+
+.review-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
+}
+
+/* Desktop layout for review page */
+@media (min-width: 900px) {
+    .review-content-grid {
+        grid-template-columns: 2fr 1fr;
+        /* Form takes 2/3, Preview takes 1/3 */
+        align-items: start;
+    }
+}
+
+/* Review Form Styling */
+.review-form-section h2 {
+    color: var(--primary-color);
+}
+
+#reviewForm label {
+    display: block;
+    font-weight: bold;
+    margin-top: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+    color: var(--secondary-color);
+}
+
+#reviewForm input[type="text"],
+#reviewForm input[type="date"],
+#reviewForm select,
+#reviewForm textarea {
+    width: 100%;
+    padding: var(--spacing-sm);
+    border: 1px solid var(--secondary-color);
+    border-radius: 4px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+}
+
+#reviewForm textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.checkbox-group {
+    border: 1px solid var(--secondary-color);
+    padding: var(--spacing-md);
+    border-radius: 4px;
+    margin-top: var(--spacing-md);
+}
+
+.checkbox-group legend {
+    font-weight: bold;
+    color: var(--secondary-color);
+    margin-bottom: var(--spacing-sm);
+    padding: 0 0.5rem;
+}
+
+.checkbox-group label {
+    display: block;
+    font-weight: normal;
+    margin: 0.25rem 0;
+    color: var(--dark-text);
+}
+
+.star-rating {
+    display: flex;
+    align-items: center;
+    /* Increased width for bigger stars */
+    width: 200px;
+    flex-direction: row-reverse;
+    /* Aligns stars to the left of the container (since it's row-reverse) */
+    justify-content: flex-start;
+    margin: 10px 0;
+    /* Reduced top margin and removed auto margin */
+    position: relative;
+    padding-left: 10px;
+
+    /* *** FIX FOR TEXT SELECTION ISSUE ***
+    This prevents the star character from being highlighted as text 
+    when the user clicks/drags.
+    */
+    -webkit-user-select: none;
+    /* Safari */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge */
+    user-select: none;
+    /* Standard */
+}
+
+/* hide the inputs */
+.star-rating input {
+    display: none;
+}
+
+/* set properties of all labels */
+.star-rating>label {
+    /* Increased size */
+    width: 40px;
+    height: 40px;
+    font-family: Arial;
+    /* Increased font size for larger stars */
+    font-size: 40px;
+    transition: 0.2s ease;
+    /* New star color: Gold/Orange */
+    color: #ffc700;
+    cursor: pointer;
+    /* Ensure labels also don't get selected */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* give label a hover state */
+.star-rating label:hover,
+.star-rating input:hover~label {
+    /* Slightly darker orange/gold on hover */
+    color: #ff9f00;
+    transition: 0.2s ease;
+}
+
+/* set shape of unselected label */
+.star-rating label::before {
+    content: '\2606';
+    /* Empty star */
+    position: absolute;
+    /* Adjust position due to larger size */
+    top: 0px;
+    line-height: 40px;
+}
+
+/* set full star shape for checked label and those that come after it */
+.star-rating input:checked~label:before {
+    content: '\2605';
+    /* Full star */
+}
+
+/* Applying full star color to checked stars and previous stars */
+.star-rating input:checked~label,
+.star-rating input:checked~label:hover,
+.star-rating input:checked:hover~label {
+    color: #ffc700;
+    /* Ensures consistent color after checking */
+}
+
+/* Product Preview Styling */
+.product-preview {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: var(--spacing-md);
+    border-radius: 5px;
+    text-align: center;
+    position: sticky;
+    /* Sticky sidebar */
+    top: 6rem;
+    /* Adjust based on header height */
+}
+
+.product-preview h2 {
+    color: var(--secondary-color);
+    border-bottom: 1px solid #eee;
+    padding-bottom: var(--spacing-sm);
+    margin-top: 0;
+}
+
+#previewImage {
+    width: 100%;
+    max-height: 300px;
+    object-fit: contain;
+    margin: var(--spacing-md) 0;
+    border-radius: 4px;
+}
+
+#previewName {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+
+
+/* ------------------- */
+/* REVIEW CONFIRMATION PAGE STYLES */
+/* ------------------- */
+
+.confirmation-box {
+    max-width: 600px;
+    margin: 4rem auto;
+    padding: var(--spacing-lg);
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-box h1 {
+    color: green;
+    font-size: 2.2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.confirmation-box .icon {
+    font-size: 4rem;
+    margin: var(--spacing-md) 0;
+}
+
+.confirmation-box a {
+    margin-top: var(--spacing-lg);
+}
+
+.confirmation-box hr {
+    margin: var(--spacing-lg) 0;
+    border: 0;
+    border-top: 1px dashed var(--primary-color);
+}
+
+.confirmation-box .small-print {
+    font-size: 0.8rem;
+    color: #666;
+    margin-top: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
